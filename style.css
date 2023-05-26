@@ -1,0 +1,98 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.library-container{
+    display: grid;
+    grid-template-columns: 30% 70%;
+}
+
+/*////////// SIDEBAR \\\\\\\\\\*/
+.sidebar{
+    background-color: #0ea5e9;
+    height: 100vh;
+    
+}
+
+.input{
+    margin: 10px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    
+}
+
+input[type="text"]{
+    padding: 10px;
+    margin: 10px 0;
+    width:  20rem;
+    border-radius: 10px;
+    background-color: lightgrey;
+    border: none;
+    box-shadow:0 0 15px 4px rgba(0,0,0,0.06);
+}
+
+input[type="radio"]{
+   cursor: pointer;
+   margin: 10px;
+   
+}
+:root{
+    accent-color: #0ea5e9;
+}
+
+.sub-btn{
+    background-color:#0ea5e9;
+    color: aliceblue;
+    width: 21rem;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.sub-btn:hover{
+    background-color: #096d9c;
+}
+
+/*////////// Main \\\\\\\\\\*/
+
+.main-nav{
+    display: grid;
+    grid-template-rows: 10% 90%;
+    background-color: aliceblue;
+}
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-body{
+    background-color: lightgrey;
+}
+
+.cards{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.card{
+    background-color: aliceblue;
+    border-left: 10px solid #0ea5e9;
+    border-radius: 10px;
+    margin: 20px;
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 10px;
+} 
