@@ -40,10 +40,26 @@ function addBookToLibrary(title, author, pages, status){
 function displayCard(event) {
     event.preventDefault();
     var cardContainer = document.getElementById('cardContainer');
+
+
+    if (myLibrary.length === 0) {
+        cardContainer.innerHTML = ''; // Remove any existing cards
+        return;
+    }
+
+
+
+
+
+
     cardContainer.innerHTML = '';
+
+   
 
     for (var i = 0; i < myLibrary.length; i++) {
         var book = myLibrary[i];
+
+
 
         var card = document.createElement('div');
         card.className = 'card';

@@ -95,6 +95,16 @@ input[type="radio"]{
    
 } 
 
+
+.card.placeholder-card {
+    background-color: aliceblue;
+    border-left: 10px solid #0ea5e9;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 20px;
+    
+}
+
 .card h1{
 
 }
