@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="./style.css">
-    <script src="./script.js"></script>
+    
 </head>
 <body>
   
@@ -14,24 +14,24 @@
         <div class="sidebar">
 
             <div class="input">
-            <form>
-                <label for="f-title">Book Title:</label><br>
-                <input type="text" name="f-title" id="f-title"><br>
+            <form id="bookForm" onsubmit="addBookToLibrary(); displayCard(event)">
+                <label for="title">Book Title:</label><br>
+                <input type="text" name="f-title" id="title" required><br>
 
-                <label for="f-author">Author Name:</label><br>
-                <input type="text" name="f-author" id="f-author"><br>
+                <label for="author">Author Name:</label><br>
+                <input type="text" name="f-author" id="author" required><br>
 
-                <label for="f-pages">Total Page Count:</label><br>
-                <input type="text" name="f-pages" id="f-pages"><br>
+                <label for="pages">Total Page Count:</label><br>
+                <input type="text" name="f-pages" id="pages" required><br>
 
-                <input type="radio" id="r-status" name="form-status" value="read">
+                <input type="radio" id="r-status" name="form-status" value="Read">
                 <label for="r-status">Read</label>
-                <input type="radio" id="p-status" name="form-status" value="progress">
+                <input type="radio" id="p-status" name="form-status" value="In Progress">
                 <label for="p-status">In Progress</label>
-                <input type="radio" id="t-status" name="form-status" value="tbr">
+                <input type="radio" id="t-status" name="form-status" value="To Be Read">
                 <label for="t-status">To Be Read</label> <br>
 
-                <button class="sub-btn" type="submit">Submit</button>
+                <button class="sub-btn" type="submit" >Submit</button>
             </form>
         </div>
         </div>
@@ -41,19 +41,19 @@
             </div>
             <div class="main-body">
 
-                <div class="cards">
-                    <div class="cards-left">
-                        <div class="card">
-                            <h6>Super Cool Idea</h6>
-                                <p>Projecting surrounded literature yet delightful 
-                                    alteration but bed men. Open are from long why cold. 
-                                    If must snug by upon sang loud left. As me do preference 
-                                    entreaties compliment motionless ye literature. </p>
+                
+                    <div class="cards">
+                        <div class="card" id="cardContainer">
+                            
+                            
                         </div>
                     </div>
-                </div>
+                    
+                
             </div>
         </div>
     </div>
+
+    <script src="./script.js"></script>
 </body>
 </html>

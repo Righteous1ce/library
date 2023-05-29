@@ -1,6 +1,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -85,14 +86,20 @@ input[type="radio"]{
     grid-template-columns: 50% 50%;
 }
 
-.card{
+ .card{
     background-color: aliceblue;
     border-left: 10px solid #0ea5e9;
     border-radius: 10px;
+    padding: 10px;
     margin: 20px;
-    height: 170px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 10px;
+   
 } 
+
+.card h1{
+
+}
+
+.card p{
+
+}
+

@@ -1,16 +1,11 @@
 
-
-
 let myLibrary = [
-    Title = 'Man',
-    Author = 'person',
-    pages = '13',
-    Status = 'read'
+    
 ];
 
 
 
-function Book(title, author, pages, status){
+function book(title, author, pages, status){
     this.title = title
     this.author = author
     this.pages = pages
@@ -24,20 +19,44 @@ function Book(title, author, pages, status){
 
 }
 
-
+////////// ADD BOOK TO THE ARRAY \\\\\\\\\\
 
 function addBookToLibrary(title, author, pages, status){
-    title = prompt("Title: ");
-    author = prompt("Author: ");
-    pages = prompt("pages: ");
-    status = prompt("status: ");
+    var title = document.getElementById('title').value;
+    var author = document.getElementById('author').value;
+    var pages = document.getElementById('pages').value;
+    var status = document.querySelector('input[name="form-status"]:checked').value;
 
-    const addedBook = new Book(title, author, pages, status);
+    const addedBook = new book(title, author, pages, status);
     myLibrary.push(addedBook);
+
+    displayCard(event);
 
 }
 
 
+////////// CARD DISPLAY \\\\\\\\\\
 
+function displayCard(event) {
+    event.preventDefault();
+    var cardContainer = document.getElementById('cardContainer');
+    cardContainer.innerHTML = '';
 
-console.log(myLibrary);
+    for (var i = 0; i < myLibrary.length; i++) {
+        var book = myLibrary[i];
+
+        var card = document.createElement('div');
+        card.className = 'card';
+
+        var cardContent = '<h2>' + book.title + '</h2>' +
+            '<p><strong>Author:</strong> ' + book.author + '</p>' +
+            '<p><strong>Page Count:</strong> ' + book.pages + '</p>' +
+            '<p><strong>Reading Status:</strong> ' + book.status + '</p>';
+
+        card.innerHTML = cardContent;
+        cardContainer.appendChild(card);
+    }
+
+    document.getElementById('bookForm').reset();
+}
+
